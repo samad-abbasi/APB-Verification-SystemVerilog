@@ -1,0 +1,63 @@
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x7bc706b6
+		top
+Loading snapshot worklib.top:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+[GEN]: paddr: 200, pwdata: 82, pwrite: 1, time: 10
+Total Gen transactions are:          1
+[GEN]: paddr: 239, pwdata: 87, pwrite: 0, time: 10
+Total Gen transactions are:          2
+[GEN]: paddr: 164, pwdata: 85, pwrite: 1, time: 10
+Total Gen transactions are:          3
+[GEN]: paddr: 126, pwdata: 66, pwrite: 1, time: 10
+Total Gen transactions are:          4
+[GEN]: paddr: 123, pwdata: 35, pwrite: 1, time: 10
+Total Gen transactions are:          5
+[GEN]: paddr: 224, pwdata: 87, pwrite: 1, time: 10
+Total Gen transactions are:          6
+[GEN]: paddr: 63, pwdata: 46, pwrite: 1, time: 10
+Total Gen transactions are:          7
+[GEN]: paddr: 145, pwdata: 9, pwrite: 0, time: 10
+Total Gen transactions are:          8
+[GEN]: paddr: 204, pwdata: 70, pwrite: 0, time: 10
+Total Gen transactions are:          9
+[GEN]: paddr: 163, pwdata: 71, pwrite: 1, time: 10
+Total Gen transactions are:         10
+Total Gen transactions are:         10
+[Driver]: paddr: 200, pwdata: 82, pwrite: 1, time: 10
+[Monitor]: paddr: 200, pwdata: 82, pwrite: 1, time: 35
+[Driver]: paddr: 239, pwdata: 87, pwrite: 0, time: 35
+write tr succesful: addr: 200 , data: 82
+[Monitor]: paddr: 239, pwdata: 87, pwrite: 0, time: 65
+[Driver]: paddr: 164, pwdata: 85, pwrite: 1, time: 65
+read tr successful: addr: 239 , expected data: 239 , actual data: 239
+[Monitor]: paddr: 164, pwdata: 85, pwrite: 1, time: 95
+[Driver]: paddr: 126, pwdata: 66, pwrite: 1, time: 95
+write tr succesful: addr: 164 , data: 85
+[Monitor]: paddr: 126, pwdata: 66, pwrite: 1, time: 125
+[Driver]: paddr: 123, pwdata: 35, pwrite: 1, time: 125
+write tr succesful: addr: 126 , data: 66
+[Monitor]: paddr: 123, pwdata: 35, pwrite: 1, time: 155
+[Driver]: paddr: 224, pwdata: 87, pwrite: 1, time: 155
+write tr succesful: addr: 123 , data: 35
+[Monitor]: paddr: 224, pwdata: 87, pwrite: 1, time: 185
+[Driver]: paddr: 63, pwdata: 46, pwrite: 1, time: 185
+write tr succesful: addr: 224 , data: 87
+[Monitor]: paddr: 63, pwdata: 46, pwrite: 1, time: 215
+[Driver]: paddr: 145, pwdata: 9, pwrite: 0, time: 215
+write tr succesful: addr: 63 , data: 46
+[Monitor]: paddr: 145, pwdata: 9, pwrite: 0, time: 245
+[Driver]: paddr: 204, pwdata: 70, pwrite: 0, time: 245
+read tr successful: addr: 145 , expected data: 145 , actual data: 145
+[Monitor]: paddr: 204, pwdata: 70, pwrite: 0, time: 275
+[Driver]: paddr: 163, pwdata: 71, pwrite: 1, time: 275
+read tr successful: addr: 204 , expected data: 204 , actual data: 204
+[Monitor]: paddr: 163, pwdata: 71, pwrite: 1, time: 305
+write tr succesful: addr: 163 , data: 71
+Simulation complete via $finish(1) at time 510 NS + 0
+./top.sv:34 $finish;
+xcelium> exit
+TOOL:	xrun
