@@ -1,0 +1,144 @@
+xrun(64): 24.09-s008: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s008: Started on Aug 31, 2026 at 12:10:47 PKT
+xrun
+	-uvm
+	-coverage functional
+	-covtest run_random
+	-covoverwrite
+	apb_if.sv
+	apb_pkg.sv
+	apb_regs.sv
+	apb_timer.sv
+	apb_fifo.sv
+	apb_peripheral.sv
+	apb_top.sv
+	-access +rwc
+Recompiling... reason: file './apb_random_sequence.sv' is newer than expected.
+	expected: Mon Aug 31 12:08:42 2026
+	actual:   Mon Aug 31 12:10:42 2026
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /opt/cadencetools/XCELIUM2409/tools/methodology/UVM/CDNS-1.1d
+file: apb_pkg.sv
+	package worklib.apb_pkg:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		apb_pkg
+		$unit_0x715e3c7f
+		top
+	Building instance overlay tables: .................... Done
+	Enabling instrumentation for coverage types: functional
+	Generating native compiled code:
+		worklib.apb_regs:sv <0x5ad18918>
+			streams:   7, words:  3562
+		worklib.apb_timer:sv <0x08fd606a>
+			streams:   6, words:  6096
+		worklib.apb_fifo:sv <0x48698b04>
+			streams:  10, words:  6056
+		worklib.apb_peripheral:sv <0x155315a3>
+			streams:  44, words: 22001
+		worklib.apb_if:sv <0x1188f1ef>
+			streams: 879, words: 938419
+	Building instance specific data structures.
+xmelab: *W,CGPIDF: Covergroup "per_instance" option , by default, is set as 0.
+xmelab: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                        Instances  Unique
+		Modules:                        5       5
+		Interfaces:                     1       1
+		Verilog packages:               5       5
+		Registers:                 14,444  10,462
+		Scalar wires:                  50       -
+		Vectored wires:                26       -
+		Named events:                   4      12
+		Always blocks:                 10      10
+		Initial blocks:               307     163
+		Clocking blocks:                2       2
+		Clocking items:                22      22
+		Parallel blocks:               26      27
+		Cont. assignments:             13      22
+		Pseudo assignments:            35       -
+		Assertions:                     3       3
+		Covergroup Instances:           0       1
+		Compilation units:              1       1
+		SV Class declarations:        207     320
+		SV Class specializations:     399     399
+		Process Clocks:                 6       1
+	Writing initial simulation snapshot: worklib.top:sv
+Loading snapshot worklib.top:sv .................... Done
+SVSEED default: 1
+xcelium> source /opt/cadencetools/XCELIUM2409/tools/xcelium/files/xmsimrc
+xcelium> source /opt/cadencetools/XCELIUM2409/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (24.09-s008)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test apb_test...
+UVM_ERROR apb_scoreboard.sv(548) @ 550025: uvm_test_top.env.e_scb [SCB_FAIL] Data Mismatch! Addr=c Exp=1 Act=0
+UVM_ERROR apb_scoreboard.sv(548) @ 1865175: uvm_test_top.env.e_scb [SCB_FAIL] Data Mismatch! Addr=c Exp=0 Act=4
+UVM_INFO /opt/cadencetools/XCELIUM2409/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 2236895: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO apb_coverage.sv(110) @ 2236895: uvm_test_top.env.e_cov [COV_REPORT] Functional coverage: 81.02%
+UVM_INFO apb_scoreboard.sv(563) @ 2236895: uvm_test_top.env.e_scb [SCB_REPORT] Matches: 49998, Mismatches: 2
+UVM_ERROR apb_scoreboard.sv(565) @ 2236895: uvm_test_top.env.e_scb [SCB_FAILED] Scoreboard reported mismatches!
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    4
+UVM_WARNING :    0
+UVM_ERROR :    3
+UVM_FATAL :    0
+** Report counts by id
+[COV_REPORT]     1
+[RNTST]     1
+[SCB_FAIL]     2
+[SCB_FAILED]     1
+[SCB_REPORT]     1
+[TEST_DONE]     1
+Simulation complete via $finish(1) at time 2236895 NS + 52
+/opt/cadencetools/XCELIUM2409/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  top(top)
+  scope    :  scope
+  testname :  run_random
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_00000000_623ce6d5.ucm (reused)
+  data               :  ./cov_work/scope/run_random/icc_00000000_623ce6d5.ucd
+TOOL:	xrun(64)	24.09-s008: Exiting on Aug 31, 2026 at 12:10:49 PKT  (total: 00:00:02)

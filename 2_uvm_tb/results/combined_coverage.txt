@@ -1,0 +1,6 @@
+name                                     Overall Average      Overall Covered      Code Average         Code Covered         Fsm Average          Fsm Covered          Functional Average   Functional Covered   
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+uvm_pkg                                  n/a                  n/a                  n/a                  n/a                  n/a                  n/a                  n/a                  n/a                  
+|--uvm_test_top                          n/a                  n/a                  n/a                  n/a                  n/a                  n/a                  n/a                  n/a                  
+| |--env                                 n/a                  n/a                  n/a                  n/a                  n/a                  n/a                  n/a                  n/a                  
+| | |--e_cov                             87.27%               88.89% (72/81)       n/a                  n/a                  n/a                  n/a                  87.27%               88.89% (72/81)       
